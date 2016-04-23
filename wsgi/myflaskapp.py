@@ -7,15 +7,8 @@ app.config.from_object(config)
 from flask.ext.basicauth import BasicAuth
 basic_auth = BasicAuth(app)
 
-
-@app.route("/")
-def hello():
-    return "Hello World!"
-
-@app.route("/secret")
-@basic_auth.required
-def secret():
-    return "Secret message!"
+from controllers.hello_controller import hello_bp
+app.register_blueprint(hello_bp, url_prefix='/hello')
 
 if __name__ == "__main__":
     app.run()
