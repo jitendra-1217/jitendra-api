@@ -23,5 +23,8 @@ app.logger.addHandler(handler)
 from controllers.hello_controller import hello_bp
 app.register_blueprint(hello_bp, url_prefix='/hello')
 
+from controllers.daily_log_controller import daily_log_bp
+app.register_blueprint(daily_log_bp, url_prefix='/dailylog')
+
 if __name__ == "__main__":
     app.run()

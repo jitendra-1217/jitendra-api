@@ -1,6 +1,6 @@
 
 from flask import Response
-import json
+from bson.json_util import dumps
 
 
 def make(
@@ -8,7 +8,7 @@ def make(
     status_code=200):
 
     return Response(
-        json.dumps(
+        dumps(
             {
                 'response': response}),
         mimetype='application/json',
