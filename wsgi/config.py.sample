@@ -1,6 +1,12 @@
 
-DEBUG               = True
+DEBUG = True
 
 BASIC_AUTH_USERNAME = 'jitendra'
 BASIC_AUTH_PASSWORD = 'pass'
-BASIC_AUTH_FORCE    = True
+
+LOG_FILENAME = '/Users/jitendraojha/jitendra-1217_github/jitendraapi/logs/project.log'
+import logging
+LOG_LEVEL = logging.DEBUG
+
+MONGO_URI = 'mongodb://localhost'
+MONGO_DBNAME = 'opnshift'
