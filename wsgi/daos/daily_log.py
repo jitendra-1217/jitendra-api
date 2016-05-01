@@ -4,7 +4,10 @@ from base import Base
 
 class DailyLog(Base):
 
-    daily_log_schema = {
+    # ------------------------------------------------------------
+    # Class members
+    collection_name = 'daily_logs'
+    collection_schema = {
         'is_private': {
             'type': 'boolean',
             'required': True
@@ -26,8 +29,6 @@ class DailyLog(Base):
         }
     }
 
+
     def __init__(self):
-        Base.__init__(
-            self,
-            'daily_logs',
-            DailyLog.daily_log_schema)
+        Base.__init__(self)

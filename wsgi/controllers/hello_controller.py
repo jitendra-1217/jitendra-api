@@ -1,3 +1,7 @@
+'''
+This controller is for testing purposes
+'''
+
 
 from flask import Blueprint
 hello_bp = Blueprint('hello', __name__)
